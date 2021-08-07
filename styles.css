@@ -11,6 +11,7 @@ body {
   font-weight: 400;
   font-family: var(--fontfamily-primary);
   font-size: 1.5rem;
+  padding-inline: 2rem;
 }
 h1,
 h2,
@@ -43,9 +44,7 @@ h3,
 p {
   margin-bottom: 1em;
 }
-#about-me {
-  padding: 2rem;
-}
+
 img {
   max-width: 100%;
   display: block;
