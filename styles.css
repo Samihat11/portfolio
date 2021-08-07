@@ -43,6 +43,9 @@ h3,
 p {
   margin-bottom: 1em;
 }
+#about-me {
+  padding: 2rem;
+}
 img {
   max-width: 100%;
   display: block;
@@ -105,6 +108,14 @@ a:hover {
   flex-direction: column;
   align-items: center;
 }
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+}
+
 #angle-up {
   display: flex;
   justify-content: center;
