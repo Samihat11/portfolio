@@ -2,10 +2,11 @@
   --fontfamily-primary: "Open Sans", sans-serif;
   --fontfamily-heading: "STIX Two Text", serif;
 }
+/* make the scroll smoother */
 html {
   scroll-behavior: smooth;
 }
-
+/* styling the body */
 body {
   line-height: 1.5;
   font-weight: 400;
@@ -13,6 +14,7 @@ body {
   font-size: 1.5rem;
   padding-inline: 2rem;
 }
+/* styling the <h> tags */
 h1,
 h2,
 h3,
@@ -47,16 +49,16 @@ p {
 
 img {
   max-width: 100%;
-  display: block;
-  align-items: center;
 }
+/* aligning text in the center */
 .text-center {
   text-align: center;
 }
-
+/* rounding the edges of the avatar */
 #avatar {
   border-radius: 50%;
 }
+/* class with linear gradient as background */
 .bg-dark {
   background: linear-gradient(#626895, #0a2038, #274361);
   color: white;
@@ -65,12 +67,13 @@ img {
   background-color: #e6e9ec;
   color: #0a2038;
 }
-
+/* making the header a flex container */
 #header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+/* aligning the li's in a row */
 .main-nav {
   display: inline-flex;
   flex-wrap: wrap;
@@ -78,52 +81,61 @@ img {
   padding: 1em;
   margin-bottom: 1em;
 }
+
 main .container {
   margin-bottom: 2rem;
   box-shadow: 0 0 1rem #777;
 }
 
+/* spacing the li's */
 .nav-item {
   margin-inline-end: 1em;
 }
-.nav-list {
-  display: flex;
-  justify-content: space-evenly;
-}
-
+/* styling the links */
 a:link {
   color: #0a1520;
   text-decoration: none;
 }
+/* applying a background when you hover on links. */
 a:hover {
   background-color: rgb(245, 240, 240);
 }
 .container {
   margin-inline: auto;
+  padding: 1rem;
   width: min(90%, 80rem);
 }
+/* creating a flex container and designing them as a column for smaller screens. */
 .split {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+/* applying transition to scaling to make it smoother  */
 .grow {
   transition: all 0.2s ease-in-out;
 }
-
+/* applying scale on hover to the projects */
 .grow:hover {
   transform: scale(1.1);
 }
-
+/* styling footer link */
+.nav-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+/* creating a flex container to center the angle up */
 #angle-up {
   display: flex;
   justify-content: center;
   padding-block: 1em;
 }
+/* styling the angle up button */
 .fas {
   color: #041e3a;
   font-size: 1.5rem;
 }
+/* changing the layout and sizing of social icons when the viewport size changes. */
 @media (min-width: 40em) {
   .split {
     flex-direction: row;
@@ -140,5 +152,16 @@ a:hover {
   .fas {
     font-size: 3rem;
     transition: 0.5s;
+  }
+}
+/* changing the nav to stack vertically in a smaller screen and removing background*/
+@media (max-width: 40em) {
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+  }
+  .main-nav a {
+    color: white;
   }
 }
