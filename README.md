@@ -2,8 +2,6 @@
 
 ## Description
 
-I
-
 ## screenshot
 
 ## links
