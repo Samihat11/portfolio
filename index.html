@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="./assets/reset.css" />
-    <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="stylesheet" href="assets/reset.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,117 +25,36 @@
     ></script>
   </head>
   <body>
-    <header id="header" class="bg-dark">
+    <header class="hero">
+      <div id="nav-div">
+        <button
+          class="nav-toggle"
+          aria-controls="main-nav"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+      </div>
       <nav>
-        <ul class="main-nav">
-          <li class="nav-item"><a href="#about-me">About Me</a></li>
+        <ul id="main-nav" class="main-nav" data-visible="false">
+          <li class="nav-item"><a href="#about-me">About</a></li>
           <li class="nav-item"><a href="#projects">Projects</a></li>
-          <li class="nav-item"><a href="#contact"> Contact Me </a></li>
+          <li class="nav-item"><a href="#contact">Connect</a></li>
         </ul>
       </nav>
-      <img
-        id="avatar"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRyna4j2Ztryu3N7yX4jTKO4UKg_SokPDvUw&usqp=CAUß"
-        alt="
-        Female placeholder image"
-      />
-
-      <h1>SAMIRA ABDALLA</h1>
-      <p>Aspiring Software Developer</p>
+      <section class="info">
+        <h1 class="text-center">Samira Abdalla</h1>
+      </section>
     </header>
-    <section id="about-me" class="split">
-      <h2 class="text-center">About Me</h2>
-
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, odio
-        voluptas! Facilis delectus vel eos vitae totam dolores rerum quos
-        laboriosam, architecto ab, sunt aliquam id! Architecto excepturi sequi
-        provident.
-      </p>
-    </section>
-    <main id="projects" class="bg-light">
-      <h2 class="text-center">Projects</h2>
-      <section class="grow container split">
-        <a href="https://www.google.com" target="_blank"
-          ><img
-            src="https://www.aquachek.com/wp-content/uploads/icon_calc.png"
-            alt="calculator"
-          />
-        </a>
-        <section>
-          <h3 class="text-center">Project 1</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
-            dolorum dicta iusto perspiciatis omnis, in voluptatibus rem. Nemo
-            velit architecto soluta nobis hic sequi atque illum pariatur,
-            voluptates quos molestias.
-          </p>
-        </section>
-      </section>
-      <section class="grow container split">
-        <a href="https://www.google.com" target="_blank"
-          ><img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYxYZbIcs1LiM2k5PQssMi6mkTi6LiDrOMhA&usqp=CAU"
-            alt="budget chart"
-          />
-        </a>
-        <section>
-          <h3 class="text-center">Project 2</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
-            dolorum dicta iusto perspiciatis omnis, in voluptatibus rem. Nemo
-            velit architecto soluta nobis hic sequi atque illum pariatur,
-            voluptates quos molestias.
-          </p>
-        </section>
-      </section>
-      <section class="grow container split">
-        <a href="https://www.google.com" target="_blank">
-          <img
-            src="https://clipart.info/images/ccovers/1559064731google-small.png"
-            alt="google logo"
-          />
-        </a>
-        <section>
-          <h3 class="text-center">Project 3</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
-            dolorum dicta iusto perspiciatis omnis, in voluptatibus rem. Nemo
-            velit architecto soluta nobis hic sequi atque illum pariatur,
-            voluptates quos molestias.
-          </p>
-        </section>
+    <main>
+      
+      <section>
+        <h2>Projects</h2>
       </section>
     </main>
-
-    <footer id="contact">
-      <h4 class="text-center">Contact Me</h4>
-      <ul class="nav-list">
-        <li>
-          <a href="https://www.facebook.com" target="_blank"
-            ><i class="fab fa-facebook"></i
-          ></a>
-        </li>
-        <li>
-          <a href="https://github.com/Samihat11" target="_blank"
-            ><i class="fab fa-github"></i
-          ></a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com" target="_blank"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-        </li>
-        <li>
-          <a href="https://www.twitter.com" target="_blank"
-            ><i class="fab fa-twitter"></i
-          ></a>
-        </li>
-      </ul>
-      <div id="angle-up">
-        <a href="#header"><i class="fas fa-angle-up"></i></a>
-      </div>
+    <footer>
+      <section></section>
     </footer>
-    <script src="./assets/script.js"></script>
   </body>
+  <script src="assets/script.js"></script>
 </html>
