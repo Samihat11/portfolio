@@ -1,8 +1,8 @@
 :root {
-  --fontfamily-primary: "Open Sans", sans-serif;
-  --fontfamily-heading: "STIX Two Text", serif;
+  --fontfamily-primary: 'Open Sans', sans-serif;
+  --fontfamily-heading: 'STIX Two Text', serif;
 }
-/* make the scroll smoother */
+
 html {
   scroll-behavior: smooth;
 }
@@ -12,8 +12,29 @@ body {
   font-weight: 400;
   font-family: var(--fontfamily-primary);
   font-size: 1.5rem;
-  padding-inline: 2rem;
+  overflow-x: hidden;
+
 }
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.main-nav {
+  display: flex;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 50%;
+  gap: 4rem;
+  letter-spacing: 0.2rem;
+}
+
 /* styling the <h> tags */
 h1,
 h2,
@@ -23,12 +44,14 @@ h4 {
   font-weight: 700;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 5rem;
+  letter-spacing: .6rem;
+  padding: 2rem;
 }
 h2 {
   font-size: 2.5rem;
-  color: rgb(45, 33, 97);
-  text-decoration: underline;
+  /* color: rgb(45, 33, 97);
+  text-decoration: underline; */
 }
 h3 {
   font-size: 2rem;
@@ -47,125 +70,117 @@ p {
   margin-bottom: 1em;
 }
 
-img {
-  max-width: 100%;
+.info {
+  margin: 2rem;
 }
-#header img {
-  height: 35%;
-  width: 35%;
-}
-/* aligning text in the center */
+
 .text-center {
   text-align: center;
+  
 }
-/* rounding the edges of the avatar */
-#avatar {
-  border-radius: 50%;
-}
-/* class with linear gradient as background */
-.bg-dark {
-  background: linear-gradient(#626895, #17324e, #274361);
-  color: white;
-}
-.bg-light {
-  background-color: #dde1fa;
-  color: #0a2038;
-}
-/* making the header a flex container */
-#header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/* aligning the li's in a row */
-.main-nav {
-  display: inline-flex;
-  flex-wrap: wrap;
-  background-color: white;
-  padding: 1em;
-  margin-bottom: 1em;
-}
+/* .main-nav[data-visible='false'] {
+ 
+  transition: all 500ms ease-in-out;
+} */
 
-main .container {
-  margin-bottom: 2rem;
-  box-shadow: 0 0 1rem #777;
-}
-
-/* spacing the li's */
-.nav-item {
-  margin-inline-end: 1em;
-}
 /* styling the links */
 a:link {
-  color: #0a1520;
+  color: rgb(226, 202, 202);
   text-decoration: none;
 }
-/* applying a background when you hover on links. */
+/* applying a background when you hover on links.
 a:hover {
-  background-color: rgb(245, 240, 240);
+
+  /* background-color: rgb(245, 240, 240); */
+
+a:visited {
+  color: rgb(226, 218, 218);
 }
-.container {
-  margin-inline: auto;
-  padding: 1rem;
-  width: min(90%, 80rem);
+.hero {
+  height: 70vh;
+  background: rgb(4,9,25);
+  background: linear-gradient(163deg, rgba(4,9,25,.7) 0%, rgba(39,43,65,.9) 40%, rgba(48,49,55,.9) 70%, rgba(4,9,25,.7) 100%);
 }
-/* creating a flex container and designing them as a column for smaller screens. */
-.split {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/* applying transition to scaling to make it smoother  */
-.grow {
-  transition: all 0.2s ease-in-out;
-}
-/* applying scale on hover to the projects */
-.grow:hover {
-  transform: scale(1.1);
-}
-/* styling footer link */
-.nav-list {
-  display: flex;
-  justify-content: space-evenly;
-}
-/* creating a flex container to center the angle up */
-#angle-up {
-  display: flex;
-  justify-content: center;
-  padding-block: 1em;
-}
-/* styling the angle up button */
-.fas {
-  color: #041e3a;
-  font-size: 1.5rem;
-}
-/* changing the layout and sizing of social icons when the viewport size changes. */
-@media (min-width: 40em) {
-  .split {
-    flex-direction: row;
-    justify-content: center;
+
+@media (max-width: 50em) {
+  .main-nav {
+    width: 70%;
   }
-  .split > * {
-    flex-basis: 100%;
+  h1 {
+    font-size: 4rem;
+    letter-spacing: .25rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 35em) {
+  h1 {
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+    padding: 1rem;
   }
 
-  .fab {
-    transition: 0.5s;
-    font-size: 2.5rem;
-  }
-  .fas {
-    font-size: 3rem;
-    transition: 0.5s;
-  }
-}
-/* changing the nav to stack vertically in a smaller screen and removing background*/
-@media (max-width: 40em) {
   .main-nav {
     display: flex;
     flex-direction: column;
-    background-color: transparent;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100vw;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 2rem;
+    transform: translateX(-100%);
+    transition: transform 350ms ease-in;
   }
-  .main-nav a {
-    color: white;
+
+  .nav-item {
+    visibility: inherit;
+    opacity: inherit;
+    position: relative;
+
+  }
+
+  .main-nav.toggled {
+    background-color: rgb(199, 188, 188);
+    opacity: 1;
+    top: 4rem;
+    display: flex;
+    visibility: visible;
+    z-index: 2;
+    transform: translateX(0%);
+    transition: transform 350ms ease-in;
+  }
+
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    background: url('./images/bars-solid.svg');
+    z-index: 99;
+    width: 2rem;
+    aspect-ratio: 1;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    border: 0;
+  }
+  #nav-div {
+    display: flex;
+    height: 4rem;
+  }
+  .nav-toggle.active {
+    background: url('./images/x-solid.svg');
+    background-repeat: no-repeat;
+  }
+
+  @keyframes navListFade {
+    from{
+      opacity: 0;
+      transform: translateX(-50%)
+    }to{
+      opacity: 1;
+      transform: translateX(0%)
+    }
+    
   }
 }
