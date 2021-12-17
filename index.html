@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="assets/reset.css" />
-    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,7 +25,7 @@
     ></script>
   </head>
   <body>
-    <header class="hero">
+    <header id="header" class="hero">
       <div id="nav-div">
         <button
           class="nav-toggle"
@@ -44,17 +44,122 @@
       </nav>
       <section class="info">
         <h1 class="text-center">Samira Abdalla</h1>
+        <h2 class="text-center sub-title">Web Developer</h2>
       </section>
     </header>
-    <main>
-      
+    <main id="projects">
+      <section id="about-me">
+        <h2 class="text-center">About</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque distinctio dolor ipsam, dolore dolorum quae ex incidunt, qui eos quod aut et rerum eligendi tempora voluptatibus magni deserunt amet ab.
+        </p>
+      </section>
       <section>
-        <h2>Projects</h2>
+        <h2 class="text-center">Projects</h2>
+      </section>
+
+      <section class="container split">
+        <section class="project1 project-container">
+          <div class="project-info text-center">
+            <h3>Notes App</h3>
+            <p>
+              Note taking application that also translates the notes when saved.
+              Uses API's from LibreTranslate and Pantry. This was a group
+              project.
+            </p>
+            <div class="links-container">
+            <a href="https://github.com/baker-ling/osu_bcs_project1" target="_blank">Repo</a>
+            <a
+              href="https://baker-ling.github.io/osu_bcs_project1/"
+              target="_blank"
+              >Demo</a
+            >
+          </div>
+          </div>
+        </section>
+
+        <section class="project2 project-container">
+          <div class="project-info text-center">
+            <h3>Blog App</h3>
+            <p>
+              A CMS-style blog site using Model View Controller(MVC) paradigm.
+              The app is built using Express, MySQL, Sequelize and Tailwindcss.
+            </p>
+            <div class="links-container">
+            <a href="https://github.com/Samihat11/tech-blog" target="_blank"
+              >Repo</a
+            >
+            <a href="https://dry-depths-15778.herokuapp.com/" target="_blank"
+              >Demo</a
+            >
+          </div>
+          </div>
+        </section>
+
+        <section class="project3 project-container">
+          <div class="project-info text-center">
+            <h3>Weather App</h3>
+            <p>
+              A simple web application that allows users to search for the
+              current and 5day weather forecast of a city. Uses the OpenWeather API.
+            </p>
+            <div class="links-container">
+            <a
+              href="https://github.com/Samihat11/weather-dashboard"
+              target="_blank"
+              >Repo</a
+            >
+            <a
+              href="https://samihat11.github.io/weather-dashboard/"
+              target="_blank"
+              >Demo</a
+            >
+          </div>
+          </div>
+        </section>
+
+        <section class="project4 project-container">
+          <div class="project-info text-center">
+            <h3>Quiz App</h3>
+            <p>A simple timed quiz application.</p>
+            <div class="links-container">
+            <a href="https://github.com/Samihat11/Code-quiz" target="_blank"
+              >Repo</a
+            >
+            <a href="https://samihat11.github.io/Code-quiz/" target="_blank"
+              >Demo</a
+            >
+          </div>
+          </div>
+        </section>
+        
       </section>
     </main>
-    <footer>
-      <section></section>
+    <footer id="contact">
+      <h3 class="text-center">Connect</h3>
+      <ul class="nav-list">
+        <li>
+          <a href="https://github.com/Samihat11" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/samira-abdalla-3971981b5"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </li>
+        <li>
+          <a href="mailto:samira.dev@gmail.com"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </li>
+      </ul>
+      <div id="angle-up">
+        <a href="#header"><i class="fas fa-angle-up"></i></a>
+      </div>
     </footer>
   </body>
-  <script src="assets/script.js"></script>
+  <script src="assets/js/script.js"></script>
 </html>

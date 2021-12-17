@@ -16,18 +16,9 @@ const menuToggleHandler = () => {
     const visible = mainNav.getAttribute('data-visible');
     if (visible === 'true') {
       mainNav.setAttribute('data-visible', false);
-    //   mainNav.classList.remove('toggled');
 
     }
 }
 
 
 navToggle.addEventListener('click', menuToggleHandler);
-//   const visible = mainNav.getAttribute('data-visible');
-//   if (visible === 'false') {
-//     mainNav.setAttribute('data-visible', true);
-//     navToggle.setAttribute('aria-expanded', true);
-//   } else {
-//     mainNav.setAttribute('data-visible', false);
-//     navToggle.setAttribute('aria-expanded', false);
-//   }
