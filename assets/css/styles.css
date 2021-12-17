@@ -251,14 +251,18 @@ i {
   .hero {
     height: 50vh;
   }
-  
+
   nav {
     width: 100vw;
   }
   .main-nav {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    align-items: center;
+    position: absolute;
     flex-direction: column;
-    transition: transform 350ms ease-in;
+    transform: translateX(100%);
+    transition: all 0.4s ease-in;
     background-color: rgb(199, 188, 188, 0.6);
   }
 
@@ -272,13 +276,14 @@ i {
   }
 
   .main-nav.toggled {
-    align-items: center;
+    opacity: 1;
+    visibility: visible;
     top: 4rem;
     display: flex;
     visibility: visible;
     z-index: 2;
     transform: translateX(0%);
-    transition: transform 400ms ease-in;
+    transition: transform 0.4s ease-in;
   }
 
   .about {
