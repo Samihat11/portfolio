@@ -79,7 +79,7 @@ p {
 
 .sub-title {
   margin-top: -2rem;
-  color: rgb(222, 215, 230);
+  color: rgb(193, 190, 196);
   font-size: 2rem;
   letter-spacing: 0.2rem;
 }
@@ -109,6 +109,7 @@ a:visited {
     rgba(4, 9, 25, 0.7) 100%
   );
   margin-bottom: 1rem;
+
 }
 
 .container {
@@ -152,7 +153,6 @@ a:visited {
 .links-container {
   display: flex;
   justify-content: space-around;
-  /* border: 1px solid black; */
   padding: 2rem;
 }
 
@@ -229,23 +229,32 @@ i {
   }
 
   .project-container {
-    width: 90vw;
-    height: 80vh;
+    width: 80vw;
+    height: 90vh;
   }
 }
 @media (max-width: 35em) {
   h1 {
-    font-size: 2rem;
-    padding: 1rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
+    letter-spacing: .2rem;
   }
 
   body{
+    overflow-x: hidden;
     font-size: 1rem;
   }
 
   .sub-title {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .about {
+    padding-inline: 2rem;
+  }
+
+  .info {
+    padding: 0;
   }
 
   .hero {
@@ -256,12 +265,11 @@ i {
     width: 100vw;
   }
   .main-nav {
+    display: none;
     opacity: 0;
-    visibility: hidden;
     align-items: center;
     position: absolute;
     flex-direction: column;
-    transform: translateX(100%);
     transition: all 0.4s ease-in;
     background-color: rgb(199, 188, 188, 0.6);
   }
@@ -276,18 +284,14 @@ i {
   }
 
   .main-nav.toggled {
+    font-weight: bolder;
     opacity: 1;
     visibility: visible;
     top: 4rem;
     display: flex;
     visibility: visible;
     z-index: 2;
-    transform: translateX(0%);
-    transition: transform 0.4s ease-in;
-  }
-
-  .about {
-    padding-inline: 2rem;
+    transition: opacity 0.4s ease-in;
   }
 
   .nav-toggle {
