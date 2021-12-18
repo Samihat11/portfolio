@@ -69,8 +69,15 @@ p {
 }
 
 .info {
-  margin: 2rem;
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 100vw;
+  /* margin: 2rem;
+  padding: 1rem; */
+  place-items: center;
+  /* border: 1px solid black; */
 }
 
 .text-center {
@@ -99,7 +106,9 @@ a:visited {
   color: rgb(0, 0, 0);
 }
 .hero {
-  height: 70vh;
+  display: grid;
+  grid-template-rows: 10% auto;
+  height: 60vh;
   background: rgb(4, 9, 25);
   background: linear-gradient(
     163deg,
@@ -175,7 +184,7 @@ a:visited {
   background: rgba(238, 233, 233, 0.95);
   color: rgb(14, 13, 13);
   height: 100%;
-  padding: 2rem;
+  padding: 1rem;
   transform: translateY(100%);
   font-weight: bold;
   opacity: 0;
@@ -224,20 +233,28 @@ i {
     padding: 1rem;
   }
 
+  .project-info h3 {
+    font-size: 2rem;
+  }
+
   .container {
     grid-template-columns: 1fr;
   }
 
   .project-container {
     width: 80vw;
-    height: 90vh;
+    height: 50vh;
   }
 }
 @media (max-width: 35em) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     letter-spacing: .2rem;
+  }
+
+  h2{
+    font-size: 1.5rem;
   }
 
   body{
@@ -264,14 +281,25 @@ i {
   nav {
     width: 100vw;
   }
+
+  .project-container {
+    width: 85vw;
+    height: 50vh;
+  }
+
+  .project-info h3 {
+    font-size: 1.5rem;
+  }
+
   .main-nav {
     display: none;
     opacity: 0;
     align-items: center;
     position: absolute;
     flex-direction: column;
+    transform: translateX(100%);
     transition: all 0.4s ease-in;
-    background-color: rgb(199, 188, 188, 0.6);
+    background-color: rgb(199, 188, 188, 0.9);
   }
 
   main {
@@ -291,7 +319,8 @@ i {
     display: flex;
     visibility: visible;
     z-index: 2;
-    transition: opacity 0.4s ease-in;
+    transform: translateX(0%);
+    transition: all 0.4s ease-in;
   }
 
   .nav-toggle {
